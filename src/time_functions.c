@@ -30,11 +30,11 @@ long	get_time(void)
 	return (time);
 }
 
-void	ft_usleep(long time_in_ms)
+void	ft_usleep(long time_in_ms, t_philo *philo)
 {
 	long	start_time;
 
 	start_time = get_time();
-	while (get_time() - start_time < time_in_ms)
+	while (get_time() - start_time < time_in_ms && !is_dead(philo))
 		usleep(100);
 }

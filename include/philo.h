@@ -65,7 +65,7 @@ void					print_all_eaten(t_data *data);
 int						check_time(t_philo *philo);
 void					actualize_meal_time(t_philo *philo);
 long					get_time(void);
-void					ft_usleep(long time_in_ms);
+void					ft_usleep(long time_in_ms, t_philo *philo);
 /* destroy */
 void					destroy_forks(t_data *data);
 void					destroy_mutex(t_data *data);

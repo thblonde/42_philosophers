@@ -30,7 +30,7 @@ void	eating(t_philo *philo)
 		safe_print(philo, "is eating");
 	philo->meal_count++;
 	actualize_meal_time(philo);
-	ft_usleep(philo->data->time_to_eat);
+	ft_usleep(philo->data->time_to_eat, philo);
 	if (is_full(philo))
 		increment_full(philo->data);
 	pthread_mutex_unlock(&philo->left_fork);
@@ -41,7 +41,7 @@ void	sleeping(t_philo *philo)
 {
 	if (!everybody_ate(philo->data))
 		safe_print(philo, "is sleeping");
-	ft_usleep(philo->data->time_to_sleep);
+	ft_usleep(philo->data->time_to_sleep, philo);
 }
 
 void	thinking(t_philo *philo)

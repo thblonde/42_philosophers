@@ -7,18 +7,6 @@ void	increment_full(t_data *data)
 	pthread_mutex_unlock(&data->mutex_full);
 }
 
-int	is_full(t_philo *philo)
-{
-	pthread_mutex_lock(&philo->data->mutex_full);
-	if (philo->meal_count == philo->data->max_nbr_of_meals)
-	{
-		pthread_mutex_unlock(&philo->data->mutex_full);
-		return (1);
-	}
-	pthread_mutex_unlock(&philo->data->mutex_full);
-	return (0);
-}
-
 int	is_dead(t_philo *philo)
 {
 	pthread_mutex_lock(&philo->data->mutex_dead);

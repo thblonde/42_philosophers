@@ -19,7 +19,7 @@ void	*check_dead(void *p_data)
 				print_dead(&data->philos[i]);
 				return (NULL);
 			}
-			if (data->five_args && everybody_ate(data))
+			if (everybody_ate(data))
 			{
 				print_all_eaten(data);
 				return (NULL);

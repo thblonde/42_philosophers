@@ -31,7 +31,7 @@ void	eating(t_philo *philo)
 	philo->meal_count++;
 	actualize_meal_time(philo);
 	ft_usleep(philo->data->time_to_eat, philo);
-	if (is_full(philo))
+	if (philo->meal_count == philo->data->max_nbr_of_meals)
 		increment_full(philo->data);
 	pthread_mutex_unlock(&philo->left_fork);
 	pthread_mutex_unlock(philo->right_fork);

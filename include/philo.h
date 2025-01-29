@@ -54,7 +54,6 @@ void					sleeping(t_philo *philo);
 void					thinking(t_philo *philo);
 /* safe checks */
 int						is_dead(t_philo *philo);
-int						is_full(t_philo *philo);
 void					increment_full(t_data *data);
 int						everybody_ate(t_data *data);
 /* print */

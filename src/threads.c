@@ -50,7 +50,7 @@ void	*is_alone(void *alone)
 	philo = (t_philo *)alone;
 	take_left_fork(philo);
 	ft_usleep(philo->data->time_to_die, philo);
-	safe_print(philo, "is dead");
+	safe_print(philo, "died");
 	pthread_mutex_unlock(&philo->left_fork);
 	return (NULL);
 }

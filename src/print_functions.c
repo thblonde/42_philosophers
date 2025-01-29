@@ -12,7 +12,7 @@ void	safe_print(t_philo *philo, const char *message)
 void	print_dead(t_philo *philo)
 {
 	pthread_mutex_lock(&philo->data->mutex_print);
-	printf("%ld %d is dead\n", get_time() - philo->data->start_time, philo->id);
+	printf("%ld %d died\n", get_time() - philo->data->start_time, philo->id);
 	pthread_mutex_unlock(&philo->data->mutex_print);
 }
 
